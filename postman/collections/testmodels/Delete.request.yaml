@@ -1,0 +1,16 @@
+$kind: http-request
+url: http://testmodels.test/api/user/delete
+method: DELETE
+headers:
+  - key: Accept
+    value: application/json
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "email": "nuevo_email@example.com",
+      "password": "nueva_password_segura"
+    }
+order: 7000

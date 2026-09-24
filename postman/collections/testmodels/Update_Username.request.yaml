@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://testmodels.test/api/user/update_username
+method: PUT
+headers:
+  - key: Accept
+    value: application/json
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "email": "test@example.com",
+      "password": "password123",
+      "username": "nuevo_usuario"
+    }
+order: 4000

@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://testmodels.test/api/user/get
+method: GET
+headers:
+  - key: Accept
+    value: application/json
+order: 2000

@@ -1,0 +1,245 @@
+{
+  "info": {
+    "_postman_id": "c62187f5-93da-47ae-a392-88f5efd28c70",
+    "name": "User API - testmodels",
+    "description": "Colección completa para la API de User en Laravel con todas las rutas y funcionalidades requeridas.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Create (Crear Usuario)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"testuser\",\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/create",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "create"
+          ]
+        },
+        "description": "Crea un usuario en la base de datos."
+      },
+      "response": []
+    },
+    {
+      "name": "2. Get (Paginación de 10 usuarios)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/user/get?page=1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "get"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "Devuelve la paginación de los diez primeros usuarios."
+      },
+      "response": []
+    },
+    {
+      "name": "3. Login (Iniciar sesión con email y password)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "login"
+          ]
+        },
+        "description": "Devuelve los datos de un usuario introduciendo solo el email y la contraseña."
+      },
+      "response": []
+    },
+    {
+      "name": "4. Update Username (Actualizar nombre de usuario)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\",\n  \"username\": \"nuevo_nombre_usuario\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/update_username",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "update_username"
+          ]
+        },
+        "description": "Actualiza el username de un usuario pasándole el email y la contraseña."
+      },
+      "response": []
+    },
+    {
+      "name": "5. Update Email (Actualizar correo electrónico)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\",\n  \"new_email\": \"nuevo_email@example.com\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/update_email",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "update_email"
+          ]
+        },
+        "description": "Actualiza el email de un usuario pasándole el email y la contraseña."
+      },
+      "response": []
+    },
+    {
+      "name": "6. Update Password (Actualizar contraseña)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"nuevo_email@example.com\",\n  \"password\": \"password123\",\n  \"new_password\": \"nueva_password_456\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/update_password",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "update_password"
+          ]
+        },
+        "description": "Actualiza la contraseña de un usuario pasándole el email y la contraseña."
+      },
+      "response": []
+    },
+    {
+      "name": "7. Delete (Eliminar usuario)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"nuevo_email@example.com\",\n  \"password\": \"nueva_password_456\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/delete",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "delete"
+          ]
+        },
+        "description": "Elimina el usuario pasándole email y contraseña."
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://testmodels.test"
+    }
+  ]
+}

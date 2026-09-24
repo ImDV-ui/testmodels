@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://testmodels.test/api/user/create
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: username
+      value: testuser
+      disabled: false
+    - type: text
+      key: email
+      value: test@example.com
+      disabled: false
+    - type: text
+      key: password
+      value: password123
+      disabled: false
+order: 1000
